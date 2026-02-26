@@ -3,10 +3,6 @@
 cat > /etc/nginx/sites-available/merrali << 'NGINX'
 server {
     listen 80;
-    server_name merrali.centralchat.pro;
-    return 301 https://$host$request_uri;
-}
-server {
     listen 443 ssl;
     server_name merrali.centralchat.pro;
     root /var/www/merrali;
